@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data>
+	<annotations>
+		<entity>
+			<id>0@regex</id>
+			<type>PreAnnotation</type>
+			<span>12,20</span>
+		</entity>
+		<entity>
+			<id>1@regex</id>
+			<type>PreAnnotation</type>
+			<span>33,37</span>
+		</entity>
+		<entity>
+			<id>2@regex</id>
+			<type>PreAnnotation</type>
+			<span>54,58</span>
+		</entity>
+		<entity>
+			<id>3@regex</id>
+			<type>PreAnnotation</type>
+			<span>113,121</span>
+		</entity>
+		<entity>
+			<id>4@regex</id>
+			<type>PreAnnotation</type>
+			<span>597,607</span>
+		</entity>
+		<entity>
+			<id>5@regex</id>
+			<type>PreAnnotation</type>
+			<span>1385,1388</span>
+		</entity>
+		<entity>
+			<id>6@regex</id>
+			<type>PreAnnotation</type>
+			<span>1461,1465</span>
+		</entity>
+		<entity>
+			<id>7@regex</id>
+			<type>PreAnnotation</type>
+			<span>1539,1543</span>
+		</entity>
+	</annotations>
+</data>

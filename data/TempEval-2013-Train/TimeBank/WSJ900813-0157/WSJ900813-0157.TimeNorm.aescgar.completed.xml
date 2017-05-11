@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>09:54:15 05-03-2016</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>29@e@WSJ900813-0157@aescgar</id>
+		<span>277,279</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>13</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>30@e@WSJ900813-0157@aescgar</id>
+		<span>274,276</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>August</Type>
+			<Sub-Interval>29@e@WSJ900813-0157@aescgar</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>31@e@WSJ900813-0157@aescgar</id>
+		<span>280,282</span>
+		<type>Two-Digit-Year</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Value>90</Value>
+			<Sub-Interval>30@e@WSJ900813-0157@aescgar</Sub-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>32@e@WSJ900813-0157@aescgar</id>
+		<span>21,23</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>13</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>33@e@WSJ900813-0157@aescgar</id>
+		<span>18,20</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>August</Type>
+			<Sub-Interval>32@e@WSJ900813-0157@aescgar</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>34@e@WSJ900813-0157@aescgar</id>
+		<span>24,26</span>
+		<type>Two-Digit-Year</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Value>90</Value>
+			<Sub-Interval>33@e@WSJ900813-0157@aescgar</Sub-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>35@e@WSJ900813-0157@aescgar</id>
+		<span>841,850</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>36@e@WSJ900813-0157@aescgar</id>
+		<span>841,850</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>35@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>37@e@WSJ900813-0157@aescgar</id>
+		<span>1164,1166</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>23</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>38@e@WSJ900813-0157@aescgar</id>
+		<span>1167,1171</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Years</Type>
+			<Number>37@e@WSJ900813-0157@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>39@e@WSJ900813-0157@aescgar</id>
+		<span>1385,1394</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>40@e@WSJ900813-0157@aescgar</id>
+		<span>1385,1394</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>39@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>41@e@WSJ900813-0157@aescgar</id>
+		<span>2553,2562</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>42@e@WSJ900813-0157@aescgar</id>
+		<span>2553,2562</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>41@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>43@e@WSJ900813-0157@aescgar</id>
+		<span>3903,3913</span>
+		<type>Next</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>44@e@WSJ900813-0157@aescgar</id>
+		<span>4009,4015</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Friday</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>45@e@WSJ900813-0157@aescgar</id>
+		<span>4009,4015</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>44@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>46@e@WSJ900813-0157@aescgar</id>
+		<span>4235,4244</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>47@e@WSJ900813-0157@aescgar</id>
+		<span>4235,4244</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>46@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>48@e@WSJ900813-0157@aescgar</id>
+		<span>4608,4617</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>49@e@WSJ900813-0157@aescgar</id>
+		<span>4608,4617</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>48@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>50@e@WSJ900813-0157@aescgar</id>
+		<span>5002,5007</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>53@e@WSJ900813-0157@aescgar</id>
+		<span>5871,5874</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>End</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>54@e@WSJ900813-0157@aescgar</id>
+		<span>5867,5871</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Week</Type>
+			<Number></Number>
+			<Modifier>53@e@WSJ900813-0157@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>55@e@WSJ900813-0157@aescgar</id>
+		<span>5867,5874</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>54@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>56@e@WSJ900813-0157@aescgar</id>
+		<span>6836,6839</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>58@e@WSJ900813-0157@aescgar</id>
+		<span>7711,7715</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>59@e@WSJ900813-0157@aescgar</id>
+		<span>8596,8605</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>60@e@WSJ900813-0157@aescgar</id>
+		<span>8575,8580</span>
+		<type>After</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>59@e@WSJ900813-0157@aescgar</Interval>
+			<Period></Period>
+			<Repeating-Interval>61@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>61@e@WSJ900813-0157@aescgar</id>
+		<span>8570,8574</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>63@e@WSJ900813-0157@aescgar</id>
+		<span>8564,8569</span>
+		<type>NthFromStart</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>60@e@WSJ900813-0157@aescgar</Interval>
+			<Value>1</Value>
+			<Period></Period>
+			<Repeating-Interval>61@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>64@e@WSJ900813-0157@aescgar</id>
+		<span>9144,9147</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>End</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>65@e@WSJ900813-0157@aescgar</id>
+		<span>9155,9160</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Month</Type>
+			<Number></Number>
+			<Modifier>64@e@WSJ900813-0157@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>66@e@WSJ900813-0157@aescgar</id>
+		<span>9151,9154</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Period></Period>
+			<Repeating-Interval>65@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>68@e@WSJ900813-0157@aescgar</id>
+		<span>9447,9451</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>69@e@WSJ900813-0157@aescgar</id>
+		<span>9672,9675</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>End</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>70@e@WSJ900813-0157@aescgar</id>
+		<span>9668,9672</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Week</Type>
+			<Number></Number>
+			<Modifier>69@e@WSJ900813-0157@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>71@e@WSJ900813-0157@aescgar</id>
+		<span>9668,9675</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>70@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>72@e@WSJ900813-0157@aescgar</id>
+		<span>9856,9859</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>?</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>73@e@WSJ900813-0157@aescgar</id>
+		<span>9860,9864</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Days</Type>
+			<Number>72@e@WSJ900813-0157@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>75@e@WSJ900813-0157@aescgar</id>
+		<span>9847,9853</span>
+		<type>Next</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period>73@e@WSJ900813-0157@aescgar</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>76@e@WSJ900813-0157@aescgar</id>
+		<span>10127,10137</span>
+		<type>Next</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>77@e@WSJ900813-0157@aescgar</id>
+		<span>10211,10216</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>March</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>78@e@WSJ900813-0157@aescgar</id>
+		<span>10211,10216</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>77@e@WSJ900813-0157@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>80@e@WSJ900813-0157@aescgar</id>
+		<span>10205,10210</span>
+		<type>Between</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Start-Interval-Type>Link</Start-Interval-Type>
+			<Start-Interval>78@e@WSJ900813-0157@aescgar</Start-Interval>
+			<End-Interval-Type>DocTime</End-Interval-Type>
+			<End-Interval></End-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>81@e@WSJ900813-0157@aescgar</id>
+		<span>4997,5001</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>82@e@WSJ900813-0157@aescgar</Interval>
+			<Period>50@e@WSJ900813-0157@aescgar</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>82@e@WSJ900813-0157@aescgar</id>
+		<span>4899,4903</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>83@e@WSJ900813-0157@aescgar</id>
+		<span>7702,7705</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>84@e@WSJ900813-0157@aescgar</Interval>
+			<Period>58@e@WSJ900813-0157@aescgar</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>84@e@WSJ900813-0157@aescgar</id>
+		<span>7560,7567</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

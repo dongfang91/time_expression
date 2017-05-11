@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>10:02:05 26-00-2016</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>10@e@CNN19980222.1130.0084@aescgar</id>
+		<span>594,599</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>60</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>11@e@CNN19980222.1130.0084@aescgar</id>
+		<span>600,604</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number>10@e@CNN19980222.1130.0084@aescgar</Number>
+			<Modifier>25@e@CNN19980222.1130.0084@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>12@e@CNN19980222.1130.0084@aescgar</id>
+		<span>31,33</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>22</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>13@e@CNN19980222.1130.0084@aescgar</id>
+		<span>29,31</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>12@e@CNN19980222.1130.0084@aescgar</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@CNN19980222.1130.0084@aescgar</id>
+		<span>25,29</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>13@e@CNN19980222.1130.0084@aescgar</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>16@e@CNN19980222.1130.0084@aescgar</id>
+		<span>334,339</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>3</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@CNN19980222.1130.0084@aescgar</id>
+		<span>340,344</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Hours</Type>
+			<Number>16@e@CNN19980222.1130.0084@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>18@e@CNN19980222.1130.0084@aescgar</id>
+		<span>400,405</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>19@e@CNN19980222.1130.0084@aescgar</id>
+		<span>400,405</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>18@e@CNN19980222.1130.0084@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>20@e@CNN19980222.1130.0084@aescgar</id>
+		<span>473,478</span>
+		<type>After</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>26@e@CNN19980222.1130.0084@aescgar</Interval>
+			<Period></Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>22@e@CNN19980222.1130.0084@aescgar</id>
+		<span>484,493</span>
+		<type>Part-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Afternoon</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>23@e@CNN19980222.1130.0084@aescgar</id>
+		<span>479,483</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>22@e@CNN19980222.1130.0084@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>25@e@CNN19980222.1130.0084@aescgar</id>
+		<span>581,593</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>Less-Than</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>26@e@CNN19980222.1130.0084@aescgar</id>
+		<span>345,352</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>27@e@CNN19980222.1130.0084@aescgar</id>
+		<span>473,478</span>
+		<type>Intersection</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Intervals>20@e@CNN19980222.1130.0084@aescgar</Intervals>
+			<Intervals>23@e@CNN19980222.1130.0084@aescgar</Intervals>
+			<Repeating-Intervals></Repeating-Intervals>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

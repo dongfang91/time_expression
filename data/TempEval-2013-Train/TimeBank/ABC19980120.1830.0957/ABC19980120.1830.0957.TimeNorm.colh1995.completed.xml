@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>12:43:30 05-10-2015</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>10@e@ABC19980120.1830.0957@colh1995</id>
+		<span>739,744</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Years</Type>
+			<Number>11@e@ABC19980120.1830.0957@colh1995</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>11@e@ABC19980120.1830.0957@colh1995</id>
+		<span>733,738</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>40</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>12@e@ABC19980120.1830.0957@colh1995</id>
+		<span>2008,2012</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>13@e@ABC19980120.1830.0957@colh1995</id>
+		<span>2013,2020</span>
+		<type>AMPM-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>PM</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@ABC19980120.1830.0957@colh1995</id>
+		<span>2112,2118</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

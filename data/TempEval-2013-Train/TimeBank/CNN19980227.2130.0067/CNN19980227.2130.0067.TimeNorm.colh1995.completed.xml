@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>13:23:18 12-10-2015</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>13@e@CNN19980227.2130.0067@colh1995</id>
+		<span>31,33</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>27</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@CNN19980227.2130.0067@colh1995</id>
+		<span>29,31</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>13@e@CNN19980227.2130.0067@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>15@e@CNN19980227.2130.0067@colh1995</id>
+		<span>25,29</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>14@e@CNN19980227.2130.0067@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>18@e@CNN19980227.2130.0067@colh1995</id>
+		<span>317,336</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1996</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>19@e@CNN19980227.2130.0067@colh1995</id>
+		<span>400,407</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>January</Type>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>20@e@CNN19980227.2130.0067@colh1995</id>
+		<span>408,429</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1997</Value>
+			<Sub-Interval>19@e@CNN19980227.2130.0067@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>22@e@CNN19980227.2130.0067@colh1995</id>
+		<span>517,521</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>28@e@CNN19980227.2130.0067@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>23@e@CNN19980227.2130.0067@colh1995</id>
+		<span>717,720</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>24@e@CNN19980227.2130.0067@colh1995</id>
+		<span>1707,1728</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1997</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>26@e@CNN19980227.2130.0067@colh1995</id>
+		<span>1940,1944</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Repeating-Interval>27@e@CNN19980227.2130.0067@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>27@e@CNN19980227.2130.0067@colh1995</id>
+		<span>1945,1949</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Week</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>28@e@CNN19980227.2130.0067@colh1995</id>
+		<span>522,527</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Month</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>31@e@CNN19980227.2130.0067@colh1995</id>
+		<span>208,212</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>32@e@CNN19980227.2130.0067@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>32@e@CNN19980227.2130.0067@colh1995</id>
+		<span>213,218</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Month</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

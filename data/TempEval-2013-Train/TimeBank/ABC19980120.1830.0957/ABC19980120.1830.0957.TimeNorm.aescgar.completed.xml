@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>14:47:11 20-00-2016</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>10@e@ABC19980120.1830.0957@aescgar</id>
+		<span>733,738</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>40</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>11@e@ABC19980120.1830.0957@aescgar</id>
+		<span>739,744</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Years</Type>
+			<Number>10@e@ABC19980120.1830.0957@aescgar</Number>
+			<Modifier>14@e@ABC19980120.1830.0957@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>12@e@ABC19980120.1830.0957@aescgar</id>
+		<span>2013,2020</span>
+		<type>Part-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Evening</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>13@e@ABC19980120.1830.0957@aescgar</id>
+		<span>2008,2012</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>12@e@ABC19980120.1830.0957@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@ABC19980120.1830.0957@aescgar</id>
+		<span>726,732</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>Approx</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>15@e@ABC19980120.1830.0957@aescgar</id>
+		<span>2112,2118</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>16@e@ABC19980120.1830.0957@aescgar</id>
+		<span>31,33</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>20</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@ABC19980120.1830.0957@aescgar</id>
+		<span>29,31</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>January</Type>
+			<Sub-Interval>16@e@ABC19980120.1830.0957@aescgar</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>18@e@ABC19980120.1830.0957@aescgar</id>
+		<span>25,29</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>17@e@ABC19980120.1830.0957@aescgar</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

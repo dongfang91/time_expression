@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>13:27:42 19-11-2015</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>12@e@NYT19980212.0019@colh1995</id>
+		<span>1382,1385</span>
+		<type>Time-Zone</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>13@e@NYT19980212.0019@colh1995</id>
+		<span>1380,1382</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>58</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@NYT19980212.0019@colh1995</id>
+		<span>1378,1380</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>1</Value>
+			<AMPM-Of-Day></AMPM-Of-Day>
+			<Time-Zone>12@e@NYT19980212.0019@colh1995</Time-Zone>
+			<Sub-Interval>13@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>15@e@NYT19980212.0019@colh1995</id>
+		<span>1372,1374</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>12</Value>
+			<Sub-Interval>14@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>16@e@NYT19980212.0019@colh1995</id>
+		<span>1369,1371</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>15@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@NYT19980212.0019@colh1995</id>
+		<span>1375,1377</span>
+		<type>Two-Digit-Year</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Value>98</Value>
+			<Sub-Interval>16@e@NYT19980212.0019@colh1995</Sub-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>18@e@NYT19980212.0019@colh1995</id>
+		<span>37,39</span>
+		<type>Second-Of-Minute</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>0</Value>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>19@e@NYT19980212.0019@colh1995</id>
+		<span>34,36</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>58</Value>
+			<Sub-Interval>18@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>20@e@NYT19980212.0019@colh1995</id>
+		<span>31,33</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>1</Value>
+			<AMPM-Of-Day></AMPM-Of-Day>
+			<Time-Zone></Time-Zone>
+			<Sub-Interval>19@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>21@e@NYT19980212.0019@colh1995</id>
+		<span>23,25</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>12</Value>
+			<Sub-Interval>20@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>22@e@NYT19980212.0019@colh1995</id>
+		<span>20,22</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>21@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>23@e@NYT19980212.0019@colh1995</id>
+		<span>26,30</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>22@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>24@e@NYT19980212.0019@colh1995</id>
+		<span>87,89</span>
+		<type>Second-Of-Minute</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>0</Value>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>25@e@NYT19980212.0019@colh1995</id>
+		<span>84,86</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>58</Value>
+			<Sub-Interval>24@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>26@e@NYT19980212.0019@colh1995</id>
+		<span>81,83</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>1</Value>
+			<AMPM-Of-Day></AMPM-Of-Day>
+			<Time-Zone></Time-Zone>
+			<Sub-Interval>25@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>27@e@NYT19980212.0019@colh1995</id>
+		<span>73,75</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>12</Value>
+			<Sub-Interval>26@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>28@e@NYT19980212.0019@colh1995</id>
+		<span>70,72</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>27@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>29@e@NYT19980212.0019@colh1995</id>
+		<span>76,80</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>28@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>30@e@NYT19980212.0019@colh1995</id>
+		<span>149,151</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>12</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>31@e@NYT19980212.0019@colh1995</id>
+		<span>146,148</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>February</Type>
+			<Sub-Interval>30@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>32@e@NYT19980212.0019@colh1995</id>
+		<span>231,235</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>33@e@NYT19980212.0019@colh1995</id>
+		<span>360,368</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Thursday</Type>
+			<Sub-Interval>35@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>35@e@NYT19980212.0019@colh1995</id>
+		<span>369,376</span>
+		<type>Part-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Evening</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>36@e@NYT19980212.0019@colh1995</id>
+		<span>360,368</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Newswire</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>33@e@NYT19980212.0019@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>37@e@NYT19980212.0019@colh1995</id>
+		<span>534,538</span>
+		<type>AMPM-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>PM</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>38@e@NYT19980212.0019@colh1995</id>
+		<span>531,533</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>15</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>39@e@NYT19980212.0019@colh1995</id>
+		<span>529,530</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>7</Value>
+			<AMPM-Of-Day>37@e@NYT19980212.0019@colh1995</AMPM-Of-Day>
+			<Time-Zone></Time-Zone>
+			<Sub-Interval>38@e@NYT19980212.0019@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>41@e@NYT19980212.0019@colh1995</id>
+		<span>1311,1314</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>?</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>42@e@NYT19980212.0019@colh1995</id>
+		<span>1321,1324</span>
+		<type>Before</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>43@e@NYT19980212.0019@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>43@e@NYT19980212.0019@colh1995</id>
+		<span>1315,1320</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Year</Type>
+			<Number>41@e@NYT19980212.0019@colh1995</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

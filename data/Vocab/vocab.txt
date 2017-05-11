@@ -1,0 +1,87 @@
+\\Wsec   period 1
+\\Wminute   period
+\\Whour    period
+\\Wday      period
+\\Wweek     period     Calendar-Interval    2 
+
+
+\\Wmont   Calendar-Interval  period
+\\Wperi    period
+quart   Calendar-Interval    Number
+year   Calendar-Interval  period
+decade    period
+centur   period
+time     period
+
+morning    Part-Of-Day
+noon        Part-Of-Day
+evening       Part-Of-Day   
+//Wnight         Part-Of-Day
+dawn          Part-Of-Day
+night//W      Part-Of-Day
+
+st//W      DAY_OF_MONTH 
+nd//W      DAY_OF_MONTH 
+rd//W      DAY_OF_MONTH 
+th//W      DAY_OF_MONTH 
+
+
+
+monday      DAY_OF_WEEK
+mon
+tuesday
+tu
+tue
+tues
+wednesday
+wed
+thursday
+thu
+friday
+fri
+saturday
+sat
+sunday
+sun
+
+january       MONTH_OF_YEAR 
+jan\.
+february
+feb\.
+march
+mar\.
+april
+apr\.
+may
+june
+jun\.
+july
+jul\.
+august
+aug\.
+september
+sep\.
+sept\.
+october
+oct\.
+november
+nov\.
+december
+dec\.
+
+spring         SEASON_OF_YEAR
+summer
+fall
+autumn
+winter
+
+daily           Calendar-Interval
+annual           Calendar-Interval
+
+
+gmt    Time-zone
+edt    Time-zone
+est    Time-zone
+
+a\.m\.       AMPM-Of-Day
+p\.m\.       AMPM-Of-Day

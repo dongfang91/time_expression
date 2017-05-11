@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>17:49:43 11-10-2015</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>9@e@CNN19980126.1600.1104@colh1995</id>
+		<span>436,442</span>
+		<type>NthFromStart</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Value>4</Value>
+			<Repeating-Interval>34@e@CNN19980126.1600.1104@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@CNN19980126.1600.1104@colh1995</id>
+		<span>575,578</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@CNN19980126.1600.1104@colh1995</id>
+		<span>25,29</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>25@e@CNN19980126.1600.1104@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>24@e@CNN19980126.1600.1104@colh1995</id>
+		<span>31,33</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>26</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>25@e@CNN19980126.1600.1104@colh1995</id>
+		<span>29,31</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>January</Type>
+			<Sub-Interval>24@e@CNN19980126.1600.1104@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>31@e@CNN19980126.1600.1104@colh1995</id>
+		<span>948,953</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Day</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>32@e@CNN19980126.1600.1104@colh1995</id>
+		<span>948,953</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Repeating-Interval>31@e@CNN19980126.1600.1104@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>34@e@CNN19980126.1600.1104@colh1995</id>
+		<span>443,450</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Quarter-Year</Type>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

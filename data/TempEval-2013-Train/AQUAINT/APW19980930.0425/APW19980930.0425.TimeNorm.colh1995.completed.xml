@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>11:46:08 17-02-2016</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>14@e@APW19980930.0425@colh1995</id>
+		<span>2030,2033</span>
+		<type>Time-Zone</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>15@e@APW19980930.0425@colh1995</id>
+		<span>2028,2030</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>45</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>16@e@APW19980930.0425@colh1995</id>
+		<span>2026,2028</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>8</Value>
+			<AMPM-Of-Day></AMPM-Of-Day>
+			<Time-Zone>14@e@APW19980930.0425@colh1995</Time-Zone>
+			<Sub-Interval>15@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@APW19980930.0425@colh1995</id>
+		<span>2020,2022</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>30</Value>
+			<Sub-Interval>16@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>18@e@APW19980930.0425@colh1995</id>
+		<span>2017,2019</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>September</Type>
+			<Sub-Interval>17@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>19@e@APW19980930.0425@colh1995</id>
+		<span>2023,2025</span>
+		<type>Two-Digit-Year</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Value>98</Value>
+			<Sub-Interval>18@e@APW19980930.0425@colh1995</Sub-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>20@e@APW19980930.0425@colh1995</id>
+		<span>28,30</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>30</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>22@e@APW19980930.0425@colh1995</id>
+		<span>25,27</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>September</Type>
+			<Sub-Interval>20@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>23@e@APW19980930.0425@colh1995</id>
+		<span>20,24</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>22@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>24@e@APW19980930.0425@colh1995</id>
+		<span>216,218</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>30</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>25@e@APW19980930.0425@colh1995</id>
+		<span>213,215</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>September</Type>
+			<Sub-Interval>24@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>26@e@APW19980930.0425@colh1995</id>
+		<span>142,144</span>
+		<type>Second-Of-Minute</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>0</Value>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>28@e@APW19980930.0425@colh1995</id>
+		<span>139,141</span>
+		<type>Minute-Of-Hour</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>45</Value>
+			<Sub-Interval>26@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>29@e@APW19980930.0425@colh1995</id>
+		<span>136,138</span>
+		<type>Hour-Of-Day</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>8</Value>
+			<AMPM-Of-Day></AMPM-Of-Day>
+			<Time-Zone></Time-Zone>
+			<Sub-Interval>28@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>30@e@APW19980930.0425@colh1995</id>
+		<span>128,130</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>30</Value>
+			<Sub-Interval>29@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>31@e@APW19980930.0425@colh1995</id>
+		<span>125,127</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>September</Type>
+			<Sub-Interval>30@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>32@e@APW19980930.0425@colh1995</id>
+		<span>131,135</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>31@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>33@e@APW19980930.0425@colh1995</id>
+		<span>403,412</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Wednesday</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>34@e@APW19980930.0425@colh1995</id>
+		<span>400,402</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Newswire</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>33@e@APW19980930.0425@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>35@e@APW19980930.0425@colh1995</id>
+		<span>733,737</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>36@e@APW19980930.0425@colh1995</id>
+		<span>724,727</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period>35@e@APW19980930.0425@colh1995</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>37@e@APW19980930.0425@colh1995</id>
+		<span>691,695</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>38@e@APW19980930.0425@colh1995</id>
+		<span>777,783</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>39@e@APW19980930.0425@colh1995</id>
+		<span>777,783</span>
+		<type>Next</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period>38@e@APW19980930.0425@colh1995</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>40@e@APW19980930.0425@colh1995</id>
+		<span>854,855</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>7</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>41@e@APW19980930.0425@colh1995</id>
+		<span>849,853</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>August</Type>
+			<Sub-Interval>40@e@APW19980930.0425@colh1995</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>42@e@APW19980930.0425@colh1995</id>
+		<span>846,848</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>41@e@APW19980930.0425@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>43@e@APW19980930.0425@colh1995</id>
+		<span>1106,1110</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1995</Value>
+			<Sub-Interval></Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>45@e@APW19980930.0425@colh1995</id>
+		<span>1150,1158</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Thursday</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>46@e@APW19980930.0425@colh1995</id>
+		<span>1147,1149</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>45@e@APW19980930.0425@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>50@e@APW19980930.0425@colh1995</id>
+		<span>1754,1760</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Friday</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>51@e@APW19980930.0425@colh1995</id>
+		<span>1751,1753</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>50@e@APW19980930.0425@colh1995</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>52@e@APW19980930.0425@colh1995</id>
+		<span>724,727</span>
+		<type>Intersection</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Intervals>36@e@APW19980930.0425@colh1995</Intervals>
+			<Intervals>39@e@APW19980930.0425@colh1995</Intervals>
+			<Repeating-Intervals></Repeating-Intervals>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>53@e@APW19980930.0425@colh1995</id>
+		<span>566,575</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Unknown</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>54@e@APW19980930.0425@colh1995</id>
+		<span>576,587</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>55@e@APW19980930.0425@colh1995</id>
+		<span>566,575</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Standard</Semantics>
+			<Interval-Type>Link</Interval-Type>
+			<Interval>54@e@APW19980930.0425@colh1995</Interval>
+			<Period>53@e@APW19980930.0425@colh1995</Period>
+			<Repeating-Interval></Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>56@e@APW19980930.0425@colh1995</id>
+		<span>605,612</span>
+		<type>Between</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Start-Interval-Type>Link</Start-Interval-Type>
+			<Start-Interval>57@e@APW19980930.0425@colh1995</Start-Interval>
+			<End-Interval-Type>Link</End-Interval-Type>
+			<End-Interval>37@e@APW19980930.0425@colh1995</End-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>57@e@APW19980930.0425@colh1995</id>
+		<span>672,679</span>
+		<type>Event</type>
+		<parentsType>Other</parentsType>
+		<properties>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

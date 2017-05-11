@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>10:29:41 23-01-2016</savetime>
+  <progress>completed</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>10@e@VOA19980303.1600.0917@aescgar</id>
+		<span>402,406</span>
+		<type>Calendar-Interval</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Year</Type>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>11@e@VOA19980303.1600.0917@aescgar</id>
+		<span>397,401</span>
+		<type>This</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>10@e@VOA19980303.1600.0917@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>12@e@VOA19980303.1600.0917@aescgar</id>
+		<span>338,341</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Days</Type>
+			<Number>13@e@VOA19980303.1600.0917@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>13@e@VOA19980303.1600.0917@aescgar</id>
+		<span>334,337</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>2</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>14@e@VOA19980303.1600.0917@aescgar</id>
+		<span>524,527</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>2</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>16@e@VOA19980303.1600.0917@aescgar</id>
+		<span>528,531</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Days</Type>
+			<Number>14@e@VOA19980303.1600.0917@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>17@e@VOA19980303.1600.0917@aescgar</id>
+		<span>607,611</span>
+		<type>Period</type>
+		<parentsType>Duration</parentsType>
+		<properties>
+			<Type>Days</Type>
+			<Number>19@e@VOA19980303.1600.0917@aescgar</Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>19@e@VOA19980303.1600.0917@aescgar</id>
+		<span>603,606</span>
+		<type>Number</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Value>2</Value>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>21@e@VOA19980303.1600.0917@aescgar</id>
+		<span>502,507</span>
+		<type>Modifier</type>
+		<parentsType>Other</parentsType>
+		<properties>
+			<Type>Start</Type>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>22@e@VOA19980303.1600.0917@aescgar</id>
+		<span>508,515</span>
+		<type>Day-Of-Week</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>Tuesday</Type>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier>21@e@VOA19980303.1600.0917@aescgar</Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>23@e@VOA19980303.1600.0917@aescgar</id>
+		<span>508,515</span>
+		<type>Last</type>
+		<parentsType>Operator</parentsType>
+		<properties>
+			<Semantics>Newswire</Semantics>
+			<Interval-Type>DocTime</Interval-Type>
+			<Interval></Interval>
+			<Period></Period>
+			<Repeating-Interval>22@e@VOA19980303.1600.0917@aescgar</Repeating-Interval>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>24@e@VOA19980303.1600.0917@aescgar</id>
+		<span>31,33</span>
+		<type>Day-Of-Month</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Value>3</Value>
+			<Sub-Interval></Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>25@e@VOA19980303.1600.0917@aescgar</id>
+		<span>29,31</span>
+		<type>Month-Of-Year</type>
+		<parentsType>Repeating-Interval</parentsType>
+		<properties>
+			<Type>March</Type>
+			<Sub-Interval>24@e@VOA19980303.1600.0917@aescgar</Sub-Interval>
+			<Number></Number>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+	<entity>
+		<id>26@e@VOA19980303.1600.0917@aescgar</id>
+		<span>25,29</span>
+		<type>Year</type>
+		<parentsType>Interval</parentsType>
+		<properties>
+			<Value>1998</Value>
+			<Sub-Interval>25@e@VOA19980303.1600.0917@aescgar</Sub-Interval>
+			<Modifier></Modifier>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>

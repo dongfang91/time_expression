@@ -1,0 +1,1 @@
+["NN", "CD", "NNS", "VBP", "NNP", "IN", ",", "CC", ":", "JJ", "FW", ".", "VBD", "DT", "VBG", "TO", "VBN", "``", "PRP", "RB", "''", "WP", "VB", "MD", "JJR", "JJS", "WDT", "NNPS", "VBZ", "PRP$", "RP", "WRB", "POS", "WP$", "EX", "RBR", "RBS", "UH", "PDT", "LS", "SYM", "$"]

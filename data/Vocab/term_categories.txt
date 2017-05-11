@@ -1,0 +1,64 @@
+// =========================================
+// expressions that identify a temporal unit
+// =========================================
+second
+minute
+hour
+day
+week
+month
+period
+quarter
+year
+decade
+centur
+// =========================================
+// expressions that identify a part of a day
+// =========================================
+morning
+noon
+evening
+night
+dawn
+// ===========================================
+// expressions that identify a day of the week
+// ===========================================
+mon
+tues
+wednes
+thur
+fri
+sat
+sun
+// =============================================
+// expressions that identify a month of the year
+// =============================================
+janu
+febru
+march
+april
+may
+june
+july
+august
+septem
+octo
+novem
+decem
+// ==============================================
+// expressions that identify a season of the year
+// ==============================================
+spring
+summer
+fall
+autumn
+winter
+// ==========================
+// expressions of period sets
+// ==========================
+daily
+annually
+  
+
+
+

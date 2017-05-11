@@ -1,0 +1,43 @@
+\\bhour   period
+
+\\bweek      Period Calendar-Interval  Part-Of-Week
+\\bday     days daily    Period  Calendar-Interval
+\\byear  years yearly     Period Calendar-Interval
+
+\\bdeca  decades     period 
+\\bcent   centuries   period
+
+\\bmorn     part-of-day
+noon\\b      part-of-day
+\\beve        part-of-day  eve Last   eventualy Next
+night\\b       part-of-day
+
+day\\b    Day-Of-Week Calendar-Interval
+
+\\bmon    monday month
+
+\\btues
+\\bwed
+\\bthur
+\\bfri
+\\bsat
+\\bsun
+
+\\bann   annual anniversary  Calendar-Interval
+\\bcurr  this
+\\bprev   last
+\\brecent  last
+\\bnow
+
+\\bjan    month-of-year
+\\bfeb
+\\bmar
+\\bapr
+\\bmay
+\\bjun
+\\bjul
+\\baug
+\\bsept
+\\boct
+\\bnov
+\\bdec
