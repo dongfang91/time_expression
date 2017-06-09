@@ -79,8 +79,8 @@ def performance_measure(predict,true,posi):
     print "precision: ", match / pred
     print "recall: ", match / gold
 
-def prediction_debugging(char_x,predict,true,posi,instance_length,labels):
-    char2int = read.read_from_json('char2int')
+def prediction_debugging(char_x,predict,true,posi,instance_length,labels,char2int):
+
     #labels = read.textfile2list("data/label/one-hot_all.txt")
     one_hot = read.counterList2Dict(list(enumerate(labels, 1)))
     one_hot = {y:x for x,y in one_hot.iteritems()}
@@ -109,7 +109,10 @@ def prediction_debugging(char_x,predict,true,posi,instance_length,labels):
                 if gold_character.has_key(key) and prediction[key] != gold_character[key]:
                     imprecise_gold[key] = int2label[gold_character[key]]
                 if imprecise.has_key(key-1):
-                    imprecise_term+=raw_text[key]
+                    if key <len(raw_text):
+                        imprecise_term+=raw_text[key]
+                    else:
+                        imprecise_term = imprecise_term
                 else:
                     imprecise_term +=" " +str(key)+": "+ raw_text[key]
 
