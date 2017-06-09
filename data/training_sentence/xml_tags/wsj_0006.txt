@@ -1,0 +1,1 @@
+[[], [["12", [14, "11", "Month-Of-Year"]], ["15", [17, "02", "Day-Of-Month"]], ["18", [20, "89", "Two-Digit-Year"]]], [], [["90", [92, "11", "Month-Of-Year"]], ["93", [95, "02", "Day-Of-Month"]], ["96", [98, "89", "Two-Digit-Year"]]], [], [["482", [486, "year", "Calendar-Interval", "This"]]]]
