@@ -23,8 +23,14 @@ def spans(sents,txt):
 
 
 def split_by_sentence(start=0,end=63):
-    raw_text_dir = read.read_from_json('raw_data_dir')
-    raw_dir_simple = read.read_from_json('raw_dir_simple')
+    """
+    Split the document into sentence.    (needed to build end2end system)
+    :param start:
+    :param end:
+    :return:
+    """
+    raw_text_dir = read.read_from_json('raw_data_dir')   #### in folder data/
+    raw_dir_simple = read.read_from_json('raw_dir_simple') #### in folder data/
     for data_id in range(start,end):
         raw_text = read.read_from_dir(raw_text_dir[data_id])
         sent_tokenize_list = sent_tokenize(raw_text)
@@ -40,7 +46,14 @@ def split_by_sentence(start=0,end=63):
 
 #split_by_sentence()
 
-def sentence_tagging(start=0,end=63):
+def sentence_labeling(start=0,end=63):
+    """
+    Transform the document-level label into sentence label.
+    :param start:
+    :param end:
+    :return:
+    """
+
     raw_dir_simple = read.read_from_json('raw_dir_simple')
     xmltags = read.read_from_json('xmltags_deleted_others')
 
@@ -74,13 +87,19 @@ def sentence_tagging(start=0,end=63):
 
         read.save_in_json("training_sentence/xml_tags/"+raw_dir_simple[data_id],tag_list)
 
-#sentence_tagging()
+#sentence_labeling()
 
 def pos_sentence(start=0,end=63):
-    raw_dir_simple = read.read_from_json('raw_dir_simple')
+    """
+    Get POS tags for each sentence. (needed to build end2end system)
+    :param start:
+    :param end:
+    :return:
+    """
+    raw_dir_simple = read.read_from_json('raw_dir_simple')   #### in folder data/
     english_postagger = StanfordPOSTagger(
-        'C:/Users/dongfangxu9/PycharmProjects/pos_tagger/models/english-left3words-distsim.tagger',
-        'C:/Users/dongfangxu9/PycharmProjects/pos_tagger/stanford-postagger.jar')
+        'C:/Users/dongfangxu9/PycharmProjects/pos_tagger/models/english-left3words-distsim.tagger',    #### in folder data/
+        'C:/Users/dongfangxu9/PycharmProjects/pos_tagger/stanford-postagger.jar') #### in folder data/
     english_postagger.java_options = '-mx4096m'
 
     pos = list()
@@ -92,7 +111,7 @@ def pos_sentence(start=0,end=63):
         for sent_span in sentences_spans:
             print sent_span[0]
             text = nltk.word_tokenize(sent_span[0])
-            k = english_postagger.tag(text)
+            k = english_postagger.tag(text)   #####StanfordPnOSTagger failed to tag the underscore, see ttps://github.com/nltk/nltk/issues/1632  if use nltk 3.2.2, please change the code "word_tags = tagged_word.strip().split(self._SEPARATOR)" in function "parse_outputcode" of nltk.standford.py into "word_tags = tagged_word.strip().rsplit(self._SEPARATOR,1)" to handle undersocre issues
             index = 0
 
             for token in k:
@@ -110,6 +129,11 @@ def pos_sentence(start=0,end=63):
 #pos_sentence(start=0,end=63)
 
 def generate_character_pos():
+    """
+    Transofrom word-level POS tag to Character-level POS tag . (needed to build end2end system)
+    :return:
+    """
+
     start = 0
     end = 63
     raw_dir_simple = read.read_from_json('raw_dir_simple')
@@ -154,9 +178,15 @@ def generate_character_pos():
 
 #generate_character_pos()
 
-def generate_unicodecate(start=0,end=1):
+def generate_unicodecate(start=0,end=63):
+    """
+    generate unicode category for each character in sentences.  (needed to build end2end system)
+    :param start:
+    :param end:
+    :return:
+    """
     raw_dir_simple = read.read_from_json('raw_dir_simple')
-    unicatedict = read.read_from_json("unicatedict")
+    unicatedict = read.read_from_json("unicatedict")  #### in folder data/
 
     text_unicode_dict = dict()
 
@@ -172,6 +202,12 @@ def generate_unicodecate(start=0,end=1):
 #generate_unicodecate(start=0,end=63)
 
 def generate_vocabulary(start=0,end=1):
+    """
+    Using pre-defined gazetteer to label each character in sentences. (needed to build end2end system)
+    :param start:
+    :param end:
+    :return:
+    """
     import vocabulary
 
     vocab_dict = vocabulary.get_vocab_dict()
@@ -201,6 +237,11 @@ def generate_vocabulary(start=0,end=1):
 
 
 def load_input(filename):
+    """
+    Load input files. (needed to build end2end system)
+    :param filename:
+    :return:
+    """
     with h5py.File('data/'+ filename + '.hdf5', 'r') as hf:
         print("List of arrays in this file: \n", hf.keys())
         x1 = hf.get('char')
@@ -225,6 +266,12 @@ def load_input(filename):
     return x_char,x_pos,x_unic,x_vocab
 
 def load_pos(filename):
+    """
+    (needed to build end2end system)
+    :param filename:
+    :return:
+    """
+
     with h5py.File('data/'+ filename + '.hdf5', 'r') as hf:
         print("List of arrays in this file: \n", hf.keys())
         x = hf.get('input')
@@ -236,6 +283,10 @@ def load_pos(filename):
     return x_data
 
 def extract_tag(tags):
+    """
+    :param tags: xml_tags input
+    :return: a list of tag
+    """
     result = list()
     for item in tags:
         tag = item[1]
@@ -244,17 +295,84 @@ def extract_tag(tags):
         for i in range(k-2):
             tag_part.append(tag[i+2])
         result +=tag_part
+
+    # if len(result) >1:
+    #     intersection1 = [x for x in result if x in explicit_labels1]
+    #     intersection2 = [x for x in result if x in explicit_labels2]
+    #
+    #     if result[0] == result[1]:
+    #         result = result [0]
+    #     elif len(intersection1) ==1:
+    #         result = intersection1
+    #
+    #     elif len(intersection2) ==1:
+    #         result = intersection2
+
     return result
 
 
+def extract_tag1(tags,explicit_labels1,explicit_labels2):
+    """
+    :param tags: xml_tags input
+    :return: a list of explicit_tag
+    """
+    result = list()
+    for item in tags:
+        tag = item[1]
+        tag_part = list()
+        k = len(tag)
+        for i in range(k-2):
+            tag_part.append(tag[i+2])
+        tag_part = get_explict_label(tag_part,explicit_labels1,explicit_labels2)
+        result.append(tag_part)
+    return result
+
+def get_explict_label(result,explicit_labels1,explicit_labels2):
+
+    if len(result) >1:
+        intersection1 = [x for x in result if x in explicit_labels1]
+        intersection2 = [x for x in result if x in explicit_labels2]
+
+        if result[0] == result[1]:
+            result = result [0]
+        elif len(intersection1) ==1:
+            result = intersection1
+
+        elif len(intersection2) ==1:
+            result = intersection2
+    return result[0]
+
+def get_implict_label(result,explicit_labels1,explicit_labels2):
+
+    if len(result) >1:
+        intersection1 = [x for x in result if x in explicit_labels1]
+        intersection2 = [x for x in result if x in explicit_labels2]
+
+        if result[0] == result[1]:
+            result = ["null"]
+        elif len(intersection2) ==1:
+            result = intersection2
+
+        return result[0]
+    else:
+        return "null"
 
 
-def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
+
+
+def get_rnn_input(n_marks,outputfilename1,outputfilename2):
+    """
+    process sentence-level features into RNN input.  (needed to build end2end system)
+    :param n_marks:
+    :param outputfilename1:
+    :param outputfilename2:
+    :return:
+    """
     from keras.preprocessing.sequence import pad_sequences
 
-    raw_dir_simple = read.read_from_json('raw_dir_simple')
-    char2int = read.read_from_json('char2int')
-    pos2int = read.read_from_json('pos_tag_dict')
+    raw_dir_simple = read.read_from_json('raw_dir_simple')  #### in folder data/
+    char2int = read.read_from_json('char2int')  #### in folder data/
+    pos2int = read.read_from_json('pos_tag_dict')   #### in folder data/
 
 
     pos_dict = read.read_from_json("training_sentence/pos/text_pos_text_dict_normalized")
@@ -263,16 +381,22 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
     max_len_text = 606 + 2 * n_marks  #with marks   606: without marks            NYT19980206.0466      document_length = 10802
     #max_len_text = 10802 + 2 * n_marks
 
-
+    data_size = 1171 ## overall
+    #data_size = 161  ## all_explict_operator
     #data_size = 464  # total traininf sentence with time ex     #0-63 print total,total_with_timex     0:63 witout time ex 1422; with time ex 558;    10:63 with time ex 464; without time ex 1171
-    data_size = 395 #### total training sentence with positive operators ######
-    # f = h5py.File("data/"+outputfilename1+str(n_marks)+".hdf5", "w")
-    # dset_char = f.create_dataset("char", (data_size,max_len_text), dtype='int8')
-    # dset_pos = f.create_dataset("pos", (data_size, max_len_text), dtype='int8')
-    # dset_unic = f.create_dataset("unic", (data_size, max_len_text), dtype='int8')
-    # dset_vocab = f.create_dataset("vocab", (data_size, max_len_text), dtype='int8')
+    #data_size = 395 #### total training sentence with positive operators ######
+    f = h5py.File("data/"+outputfilename1+str(n_marks)+".hdf5", "w")
+    dset_char = f.create_dataset("char", (data_size,max_len_text), dtype='int8')
+    dset_pos = f.create_dataset("pos", (data_size, max_len_text), dtype='int8')
+    dset_unic = f.create_dataset("unic", (data_size, max_len_text), dtype='int8')
+    dset_vocab = f.create_dataset("vocab", (data_size, max_len_text), dtype='int8')
 
-    multi_labels = read.textfile2list("data/label/multi-hot.txt")
+    #explicit_labels1 = read.textfile2list("data/label/explicit_label1.txt")
+    #explicit_labels2 = read.textfile2list("data/label/explicit_label2.txt")
+    #explicit_labels =  explicit_labels2
+
+    # explicit_labels = ["Last"]
+
 
 
     #total = 0
@@ -294,10 +418,10 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
        print raw_dir_simple[data_id]
        for index in range(n_sent):
 
-           if not len(xml_tags[index]) == 0:       ####### using this line to exclude sentence without time ex
-               xml_tag = extract_tag (xml_tags[index])
-               intersection = [x for x in xml_tag if x in multi_labels]
-               if len(intersection)>0:
+           # if not len(xml_tags[index]) == 0:       ####### using this line to exclude sentence without time ex
+           #     xml_tag = extract_tag1 (xml_tags[index],explicit_labels1,explicit_labels2)
+           #     intersection = [x for x in xml_tag if x in explicit_labels]
+           #     if len(intersection)>0:
 
                    k+=1
                    ###################################  add end/start of sentence #####################################
@@ -305,7 +429,7 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
                    # pos_sent = ["\n","\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n","\n"]
                    # unic_sent = [3,3]+unicate_dict[raw_dir_simple[data_id]][index]+[3,3]
                    # vocab_sent = [1,1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1,1]
-                   print sent_spans[index][0],xml_tags[index]
+                   #print sent_spans[index][0],xml_tags[index]
                    sent = "\n\n\n"+sent_spans[index][0]+"\n\n\n"
                    pos_sent = ["\n","\n","\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n","\n","\n"]
                    unic_sent = [3,3,3]+unicate_dict[raw_dir_simple[data_id]][index]+[3,3,3]
@@ -340,10 +464,10 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
                    pos_x = pad_sequences(pos_input, dtype='int8', maxlen=max_len_text, padding="post")
                    unic_x = pad_sequences(unic_input, dtype='int8', maxlen=max_len_text, padding="post")
                    vocab_x = pad_sequences(vocab_input, dtype='int8', maxlen=max_len_text, padding="post")
-                   # dset_char[total_with_timex, :] = char_x[0]
-                   # dset_pos[total_with_timex, :] = pos_x[0]
-                   # dset_unic[total_with_timex, :] = unic_x[0]
-                   # dset_vocab[total_with_timex, :] = vocab_x[0]
+                   dset_char[total_with_timex, :] = char_x[0]
+                   dset_pos[total_with_timex, :] = pos_x[0]
+                   dset_unic[total_with_timex, :] = unic_x[0]
+                   dset_vocab[total_with_timex, :] = vocab_x[0]
                    total_with_timex += 1
        j=j+k
        # train_senten_count.append(j)
@@ -351,72 +475,78 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
 
     # read.save_in_json("training_sentence/train_sent_len",train_senten_len)
 
-    # data_size =251
-    # f = h5py.File("data/"+outputfilename2+str(n_marks)+".hdf5", "w")
-    # dset_char_val = f.create_dataset("char", (data_size,max_len_text), dtype='int8')
-    # dset_pos_val = f.create_dataset("pos", (data_size, max_len_text), dtype='int8')
-    # dset_unic_val = f.create_dataset("unic", (data_size, max_len_text), dtype='int8')
-    # dset_vocab_val = f.create_dataset("vocab", (data_size, max_len_text), dtype='int8')
-    # total_val = 0
-    #
-    # #val_senten_count = list()
-    # k=0
-    # for data_id in range(0,10):
-    #    #xmltags =  read.read_from_json("training_sentence/xml_tags/" + raw_dir_simple[data_id])
-    #    sent_spans = read.read_from_json("training_sentence/sentences/" + raw_dir_simple[data_id])
-    #    n_sent = len(sent_spans)
-    #    k+= n_sent
-    #    #val_senten_count.append(k)
-    #
-    #    for index in range(n_sent):
-    #
-    #
-    #        ###################################  add end/start of sentence #####################################
-    #        # sent = "\n" + sent_spans[index][0] + "\n"
-    #        # pos_sent = ["\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n"]
-    #        # unic_sent = [3] + unicate_dict[raw_dir_simple[data_id]][index] + [3]
-    #        # vocab_sent = [1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1]
-    #
-    #        # sent = "\n\n" + sent_spans[index][0] + "\n\n"
-    #        # pos_sent = ["\n", "\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n"]
-    #        # unic_sent = [3, 3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3]
-    #        # vocab_sent = [1, 1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1, 1]
-    #
-    #        # sent = "\n\n\n\n" + sent_spans[index][0] + "\n\n\n\n"
-    #        # pos_sent = ["\n", "\n", "\n","\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n", "\n","\n"]
-    #        # unic_sent = [3, 3, 3,3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3, 3,3]
-    #        # vocab_sent = [1, 1, 1,1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1,1, 1, 1]
-    #
-    #        sent = "\n\n\n" + sent_spans[index][0] + "\n\n\n"
-    #        pos_sent = ["\n", "\n", "\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n", "\n"]
-    #        unic_sent = [3, 3, 3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3, 3]
-    #        vocab_sent = [1, 1, 1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1, 1, 1]
-    #
-    #        char_input = [[char2int[char] for char in sent]]
-    #        pos_input = [[pos2int[pos] for pos in pos_sent]]
-    #        unic_input = [unic_sent]
-    #        vocab_input = [vocab_sent]
-    #        ###################################  add end/start of sentence #####################################
-    #
-    #        val_instan_len.append(len(sent))
-    #
-    #        ####################### no marks for start/end of sentences      ###################################
-    #        # char_input = [[char2int[char] for char in sent]]
-    #        # pos_input = [[pos2int[pos]for pos in pos_dict[raw_dir_simple[data_id]][index]]]
-    #        # unic_input = [unicate_dict[raw_dir_simple[data_id]][index]]
-    #        # vocab_input = [vocab_dcit[raw_dir_simple[data_id]][index]]
-    #        ####################### no marks for start/end of sentences      ###################################
-    #
-    #        char_x = pad_sequences(char_input, dtype='int8', maxlen=max_len_text, padding="post")
-    #        pos_x = pad_sequences(pos_input, dtype='int8', maxlen=max_len_text, padding="post")
-    #        unic_x = pad_sequences(unic_input, dtype='int8', maxlen=max_len_text, padding="post")
-    #        vocab_x = pad_sequences(vocab_input, dtype='int8', maxlen=max_len_text, padding="post")
-    #        dset_char_val[total_val, :] = char_x[0]
-    #        dset_pos_val[total_val, :] = pos_x[0]
-    #        dset_unic_val[total_val, :] = unic_x[0]
-    #        dset_vocab_val[total_val, :] = vocab_x[0]
-    #        total_val += 1
-    # print  total_val
+    data_size =251
+    f = h5py.File("data/"+outputfilename2+str(n_marks)+".hdf5", "w")
+    dset_char_val = f.create_dataset("char", (data_size,max_len_text), dtype='int8')
+    dset_pos_val = f.create_dataset("pos", (data_size, max_len_text), dtype='int8')
+    dset_unic_val = f.create_dataset("unic", (data_size, max_len_text), dtype='int8')
+    dset_vocab_val = f.create_dataset("vocab", (data_size, max_len_text), dtype='int8')
+    total_val = 0
+
+    #val_senten_count = list()
+    k=0
+    for data_id in range(0,10):
+       print raw_dir_simple[data_id]
+       #xmltags =  read.read_from_json("training_sentence/xml_tags/" + raw_dir_simple[data_id])
+       sent_spans = read.read_from_json("training_sentence/sentences/" + raw_dir_simple[data_id])
+       n_sent = len(sent_spans)
+       k+= n_sent
+       #val_senten_count.append(k)
+
+       for index in range(n_sent):
+           # if not len(xmltags[index]) == 0:       ####### using this line to exclude sentence without time ex
+           #     xml_tag = extract_tag (xmltags[index])
+           #     intersection = [x for x in xml_tag if x in explicit_labels]
+           #     if len(intersection)>0:
+           #        print sent_spans[index][0], xmltags[index]
+
+
+           ###################################  add end/start of sentence #####################################
+           # sent = "\n" + sent_spans[index][0] + "\n"
+           # pos_sent = ["\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n"]
+           # unic_sent = [3] + unicate_dict[raw_dir_simple[data_id]][index] + [3]
+           # vocab_sent = [1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1]
+
+           # sent = "\n\n" + sent_spans[index][0] + "\n\n"
+           # pos_sent = ["\n", "\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n"]
+           # unic_sent = [3, 3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3]
+           # vocab_sent = [1, 1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1, 1]
+
+           # sent = "\n\n\n\n" + sent_spans[index][0] + "\n\n\n\n"
+           # pos_sent = ["\n", "\n", "\n","\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n", "\n","\n"]
+           # unic_sent = [3, 3, 3,3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3, 3,3]
+           # vocab_sent = [1, 1, 1,1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1,1, 1, 1]
+
+               sent = "\n\n\n" + sent_spans[index][0] + "\n\n\n"
+               pos_sent = ["\n", "\n", "\n"] + pos_dict[raw_dir_simple[data_id]][index] + ["\n", "\n", "\n"]
+               unic_sent = [3, 3, 3] + unicate_dict[raw_dir_simple[data_id]][index] + [3, 3, 3]
+               vocab_sent = [1, 1, 1] + vocab_dcit[raw_dir_simple[data_id]][index] + [1, 1, 1]
+               char_input = [[char2int[char] for char in sent]]
+               pos_input = [[pos2int[pos] for pos in pos_sent]]
+               unic_input = [unic_sent]
+               vocab_input = [vocab_sent]
+
+               ###################################  add end/start of sentence #####################################
+
+               #val_instan_len.append(len(sent))
+
+               ####################### no marks for start/end of sentences      ###################################
+               # char_input = [[char2int[char] for char in sent]]
+               # pos_input = [[pos2int[pos]for pos in pos_dict[raw_dir_simple[data_id]][index]]]
+               # unic_input = [unicate_dict[raw_dir_simple[data_id]][index]]
+               # vocab_input = [vocab_dcit[raw_dir_simple[data_id]][index]]
+               ####################### no marks for start/end of sentences      ###################################
+
+               char_x = pad_sequences(char_input, dtype='int8', maxlen=max_len_text, padding="post")
+               pos_x = pad_sequences(pos_input, dtype='int8', maxlen=max_len_text, padding="post")
+               unic_x = pad_sequences(unic_input, dtype='int8', maxlen=max_len_text, padding="post")
+               vocab_x = pad_sequences(vocab_input, dtype='int8', maxlen=max_len_text, padding="post")
+               dset_char_val[total_val, :] = char_x[0]
+               dset_pos_val[total_val, :] = pos_x[0]
+               dset_unic_val[total_val, :] = unic_x[0]
+               dset_vocab_val[total_val, :] = vocab_x[0]
+               total_val += 1
+    print  total_val
     # #
     # #read.save_in_json("training_sentence/train_instan_len",train_instan_len)
     # # #
@@ -427,7 +557,7 @@ def get_training_input_with_timex(n_marks,outputfilename1,outputfilename2):
 
 #get_training_input_with_timex(2,"training_sentence/training_sentence_input_addmarks2","training_sentence/val_sentence_input_addmarks2")
 
-#get_training_input_with_timex(3,"training_sentence/training_characterlabel3_input","training_sentence/val_characterlabel3_input")
+get_rnn_input(3,"training_sentence/1","training_sentence/2")
 
 
 
@@ -438,12 +568,15 @@ def get_one_hot_labels_with_timex(n_marks,outputfilename1,outputfilename2):    #
     raw_dir_simple = read.read_from_json('raw_dir_simple')
 
 
-    #data_size = 464  # total traininf sentence with time ex     #0-63 print total,total_with_timex     0:63 witout time ex 1422; with time ex 558;    10:63 with time ex 464; without time ex 1171
-    data_size = 395 #### total training sentence
+    data_size = 1171  # total traininf sentence with time ex     #0-63 print total,total_with_timex     0:63 witout time ex 1422; with time ex 558;    10:63 with time ex 464; without time ex 1171
+    #data_size = 395 #### total training sentence
     max_len_text = 606 +2*n_marks  #with marks 606: without marks            NYT19980206.0466       document_length = 10802
     #max_len_text = 10802 + 2 * n_marks
+    explicit_labels1 = read.textfile2list("data/label/explicit_label1_new.txt")
+    explicit_labels2 = read.textfile2list("data/label/explicit_label2.txt")
 
-    labels = read.textfile2list("data/label/character_level_label3.txt")
+    labels = explicit_labels2
+
     ############### multiclass classification #############
     one_hot = read.counterList2Dict(list(enumerate(labels, 1)))
     one_hot = {y:x for x,y in one_hot.iteritems()}
@@ -467,33 +600,35 @@ def get_one_hot_labels_with_timex(n_marks,outputfilename1,outputfilename2):    #
             sentence_start = sent_spans[index][1]
 
                                                 ############## not using this line would include all sentences, and please also change the layout of the sub below  "Shift +Tab"
-            if not len(xmltags[index]) == 0:  ####### using this line to exclude sentence without time ex
-                xml_tag = extract_tag(xmltags[index])
-                intersection = [x for x in xml_tag if x in labels]
-                if len(intersection) > 0:
-                   for label in xmltags[index]:
-                       posi, info = label
-                       position = int(posi) - sentence_start
-                       posi_end = int(info[0]) -sentence_start
-                       info.pop(0)
-                       info.pop(0)
-                       info_new = list(set(info))
-                       index = 0
-                       for label in info_new:
-                           if label in labels:
-                               index = one_hot[label]
-                       ##################### add marks ########################################
-                       softmax_index[position + n_marks:posi_end + n_marks] = np.repeat(index, posi_end - position)
-                       ##################### without marks ########################################
-                       # softmax_index[position :posi_end ] = np.repeat(index, posi_end - position)
+            # if not len(xmltags[index]) == 0:  ####### using this line to exclude sentence without time ex
+            #     xml_tag = extract_tag1(xmltags[index],explicit_labels1,explicit_labels2)
+            #     intersection = [x for x in xml_tag if x in labels]
+            #     if len(intersection) > 0:
+            for label in xmltags[index]:
+                posi, info = label
+                position = int(posi) - sentence_start
+                posi_end = int(info[0]) -sentence_start
+                info.pop(0)
+                info.pop(0)
+                info_new = list(set(info))
 
-                   ############################  multiclass ####################################
-                   softmax_labels = np.eye(n_softmax)[softmax_index]
-                   ############################  binaryclass ###################################
-                   #softmax_labels = softmax_index.reshape(softmax_index.shape + (1,))
-                   ##########################################################################
-                   dset[total_with_timex] = softmax_labels
-                   total_with_timex +=1
+                explicit_label = get_implict_label(info_new,explicit_labels1,explicit_labels2)
+
+                ########################   to check whether explicit_label is part of operator #####
+                if explicit_label in explicit_labels2:
+                    label2int = one_hot[explicit_label]
+                    ##################### add marks ########################################
+                    softmax_index[position + n_marks:posi_end + n_marks] = np.repeat(label2int, posi_end - position)
+                ##################### without marks ########################################
+                # softmax_index[position :posi_end ] = np.repeat(index, posi_end - position)
+
+            ############################  multiclass ####################################
+            softmax_labels = np.eye(n_softmax)[softmax_index]
+            ############################  binaryclass ###################################
+            #softmax_labels = softmax_index.reshape(softmax_index.shape + (1,))
+            ##########################################################################
+            dset[total_with_timex] = softmax_labels
+            total_with_timex +=1
     print total_with_timex
 
     data_size = 251
@@ -519,11 +654,13 @@ def get_one_hot_labels_with_timex(n_marks,outputfilename1,outputfilename2):    #
                     info.pop(0)
                     info_new = list(set(info))
                     index = 0
-                    for label in info_new:
-                        if label in labels:
-                            index = one_hot[label]
+                    explicit_label = get_implict_label(info_new, explicit_labels1, explicit_labels2)
+                    ########################   to check whether explicit_label is part of operator #####
+                    if explicit_label in explicit_labels2:
+
+                        label2int = one_hot[explicit_label]
                     ##################### add marks ########################################
-                    softmax_index[position+n_marks:posi_end+n_marks] = np.repeat(index, posi_end - position)
+                        softmax_index[position+n_marks:posi_end+n_marks] = np.repeat(label2int, posi_end - position)
                     ##################### without marks ########################################
                     #softmax_index[position :posi_end ] = np.repeat(index, posi_end - position)
 
@@ -538,7 +675,7 @@ def get_one_hot_labels_with_timex(n_marks,outputfilename1,outputfilename2):    #
 
 # get_one_hot_labels_with_timex(2,"training_sentence/one_training_sentence_labels_addmarks", "training_sentence/one_val_sentence_labels_addmarks")
 #get_one_hot_labels_with_timex(3,"training_sentence/training_allsentence_newallintervallabels_addmarks", "training_sentence/val_allsentence_newallintervallabels_addmarks")
-#get_one_hot_labels_with_timex(3,"training_sentence/training_characterlabel3_labels", "training_sentence/val_characterlabel3_labels")
+#get_one_hot_labels_with_timex(3,"training_sentence/training_implicitlabels", "training_sentence/val_implicitlabels")
 
 
 
@@ -654,9 +791,101 @@ def get_multi_hot_labels_with_timex(n_marks,outputfilename1,outputfilename2):   
 
 
 
+def get_interval_inputs(n_marks,outputfilename1,outputfilename2):
+    raw_dir_simple = read.read_from_json('raw_dir_simple')
+    data_size = 1171  ## overall
+    j = 0
+    max_len_text = 606 + 2 * n_marks
+    explicit_labels1 = read.textfile2list("data/label/explicit_label1.txt")
+    explicit_labels2 = read.textfile2list("data/label/explicit_label2.txt")
+
+    labels = explicit_labels1 + explicit_labels2
 
 
+    one_hot = read.counterList2Dict(list(enumerate(labels, 1)))
+    one_hot = {y: x for x, y in one_hot.iteritems()}
+    n_softmax = len(labels) + 2
 
+    f = h5py.File("data/" + outputfilename1 + str(n_marks) + ".hdf5", "w")
+    dset = f.create_dataset("input", (data_size, max_len_text), dtype='int8')
+    total_with_timex = 0
+
+    for data_id in range(10, 63):
+        sent_spans = read.read_from_json("training_sentence/sentences/" + raw_dir_simple[data_id])
+        xmltags = read.read_from_json("training_sentence/xml_tags/" + raw_dir_simple[data_id])
+        n_sent = len(sent_spans)
+        k = 0
+        print raw_dir_simple[data_id]
+        for index in range(n_sent):
+            softmax_index = np.zeros(max_len_text, dtype=np.int8)
+            softmax_index[0:3] = n_softmax-1
+            sentence_start = sent_spans[index][1]
+            sentence_stop = sent_spans[index][2]
+            len_sentence = sentence_stop-sentence_start
+            softmax_index[3:3 + len_sentence] = n_softmax
+            softmax_index[3+len_sentence:len_sentence+6] = n_softmax - 1
+            for label in xmltags[index]:
+                posi, info = label
+                position = int(posi) - sentence_start
+                posi_end = int(info[0]) - sentence_start
+                info.pop(0)
+                info.pop(0)
+                info_new = list(set(info))
+
+                explicit_label = get_explict_label(info_new, explicit_labels1, explicit_labels2)
+
+                ########################   to check whether explicit_label is part of operator #####
+                if explicit_label in labels:
+                    label2int = one_hot[explicit_label]
+                    ##################### add marks ########################################
+                    softmax_index[position + n_marks:posi_end + n_marks] = np.repeat(label2int, posi_end - position)
+
+            dset[total_with_timex] = softmax_index
+            total_with_timex +=1
+    print total_with_timex
+
+
+    data_size = 251
+    f2 = h5py.File("data/" + outputfilename2 + str(n_marks) + ".hdf5", "w")
+    dset2 = f2.create_dataset("input", (data_size, max_len_text), dtype='int8')
+    total_with_timex = 0
+
+
+    for data_id in range(0, 10):
+        sent_spans = read.read_from_json("training_sentence/sentences/" + raw_dir_simple[data_id])
+        xmltags = read.read_from_json("training_sentence/xml_tags/" + raw_dir_simple[data_id])
+        n_sent = len(sent_spans)
+        k = 0
+        print raw_dir_simple[data_id]
+        for index in range(n_sent):
+            softmax_index = np.zeros(max_len_text, dtype=np.int8)
+            softmax_index[0:3] = n_softmax - 1
+            sentence_start = sent_spans[index][1]
+            sentence_stop = sent_spans[index][2]
+            len_sentence = sentence_stop - sentence_start
+            softmax_index[3:3 + len_sentence] = n_softmax
+            softmax_index[3 + len_sentence:len_sentence + 6] = n_softmax - 1
+            for label in xmltags[index]:
+                posi, info = label
+                position = int(posi) - sentence_start
+                posi_end = int(info[0]) - sentence_start
+                info.pop(0)
+                info.pop(0)
+                info_new = list(set(info))
+
+                explicit_label = get_explict_label(info_new, explicit_labels1, explicit_labels2)
+
+                ########################   to check whether explicit_label is part of operator #####
+                if explicit_label in labels:
+                    label2int = one_hot[explicit_label]
+                    ##################### add marks ########################################
+                    softmax_index[position + n_marks:posi_end + n_marks] = np.repeat(label2int,
+                                                                                     posi_end - position)
+            dset2[total_with_timex] = softmax_index
+            total_with_timex +=1
+    print total_with_timex
+
+#get_interval_inputs(3,"training_sentence/training_explicit_fea", "training_sentence/val_explicit_fea")
 
 
 ####label with only one hot training data
@@ -731,7 +960,7 @@ def create_class_weight(labels,mu):
             score = mu * total/float(item)
             class_weight[key] = score if score > 1.0 else 1.0
         else:
-            class_weight[key] = 40.0
+            class_weight[key] = 10.0
 
     return class_weight
 
@@ -756,14 +985,13 @@ def get_sample_weights_binaryclass(weghtis, label):
 
 
 
-# #######################get sample weights multiclass #########################
-# y_label = load_pos("training_sentence/training_characterlabel3_labels3")
+# #######################get sample weights multiclass #########################  #trainy_operator = load_pos("training_alloperatorlabels3")
+# y_label = load_pos("training_sentence/training_allexplicitoperatorlabels3")
 # print y_label[100]
 #
 # sample_weights = get_sample_weights_multiclass(y_label,0.05)
-#
-# np.save("data/training_sentence/sampleweights_characterlabel3", sample_weights)
-# sample_weights = np.load("data/training_sentence/sampleweights_characterlabel3.npy")
+# np.save("data/training_sentence/sampleweights_allexplicitoperatorlabels3", sample_weights)
+# sample_weights = np.load("data/training_sentence/sampleweights_allexplicitoperatorlabels3.npy")
 #
 # print sample_weights[150][0:100]
 
@@ -775,7 +1003,7 @@ def get_sample_weights_binaryclass(weghtis, label):
 # np.save("data/training_sentence/one_sample_weights4_addmarks2", sample_weights)
 # sample_weights = np.load("data/training_sentence/one_sample_weights4_addmarks2.npy")
 #
-# print sample_weights
+#print sample_weights
 
 ############################################################## test whether the preprocess step is correct or not ############################
 
@@ -789,7 +1017,7 @@ def get_sample_weights_binaryclass(weghtis, label):
 # print x_pos[start][0:608]
 # print x_unic[start][0:608]
 # print x_vocab[start][0:608]
-#
+
 # label = load_pos("training_sentence/training_sentence_allintervallabels_addmarks3")#("training_sentence/training_one_hot_sentence_labels_addmarks")  #
 # #
 # a = hot_vectors2class_index(label[start])
